@@ -1,0 +1,38 @@
+[
+  {
+    "name": "oh_revised_code",
+    "description": "Get the FULL TEXT of a section of the Ohio Revised Code — Ohio state statutes — by citation. \"ORC 2903.02\" is section 2903.02 (murder). Returns the statutory text (the section body only, with no surrounding page text) and its effective date as a separate field; `text_scope` says what a given answer contains. Keyless. Use for \"what does Ohio Revised Code 2903.02 say\", \"text of ORC 4511.19\", or to check an Ohio statute a case relies on.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "section": {
+          "type": "string",
+          "description": "Section as cited, e.g. \"2903.02\" or \"4511.19\". Title and chapter are encoded in the number."
+        }
+      },
+      "required": [
+        "section"
+      ]
+    }
+  },
+  {
+    "name": "oh_code_search",
+    "description": "Search the Ohio Revised Code BY TOPIC or keyword rather than by section number -- \"EDGE certification minority business\", \"county competitive bidding threshold\", \"OVI penalties\", \"landlord security deposit\". Covers all chapters of the Revised Code. Returns ranked sections with citation, heading and an opening excerpt; call oh_revised_code with a result's section for the full text. Full-text match, not semantic search. A query with no hits returns found:false. Keyless.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Topic or keywords, e.g. \"minority business enterprise certification\"."
+        },
+        "limit": {
+          "type": "number",
+          "description": "Max results, default 10, max 25."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  }
+]

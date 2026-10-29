@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-ohio-code",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Ohio Revised Code — state statutes by citation.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-ohio-code": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "ohio-code"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-ohio-code.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/ohio-code",
   "pipeworx": {
-    "sourceHash": "v1-5e198477fb9c91cdd0aefb5d5f8996d95982fd995fce1f37bf47a6ddfdb27419",
-    "sourceCommit": "f54ad77e789f27fe393978f9c080b5b18c87bb4f"
+    "mode": "gateway",
+    "slug": "ohio-code",
+    "gatewaySlug": "ohio-code",
+    "sourceHash": "v1-4d38022661e129be3d7af280a58f337b60f9d5eb2954f38b2390dc63c489b1f7",
+    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
   }
 }
