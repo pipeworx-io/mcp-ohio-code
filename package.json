@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-ohio-code",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Ohio Revised Code — state statutes by citation.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "ohio-code",
     "gatewaySlug": "ohio-code",
-    "sourceHash": "v1-4d38022661e129be3d7af280a58f337b60f9d5eb2954f38b2390dc63c489b1f7",
-    "sourceCommit": "b2c4383545bb35171d0ada2beb1c9c7168ea175e"
+    "sourceHash": "v1-db790627f1ae9e1e99ae03de9421476f023ff2c85893417272edd2ba62402ac0",
+    "sourceCommit": "bed7faa04e7276899b5e3870ef11c98625371f2b"
   }
 }
